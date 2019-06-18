@@ -1,5 +1,11 @@
+
+
 class SongsController < ApplicationController
     
+    def index
+        @songs = Song.all
+    end
+
     def create
         @album = Album.find(params[:album_id])
         @song = @album.songs.create(song_params)
