@@ -1,4 +1,6 @@
 <%= @album.title %> - 
 <%= @album.artist %>
 <br><br>
+<%= render @album.songs %>
+<%= render 'songs/form' %>
 <%= link_to 'Back to Albums Index', albums_path %>
